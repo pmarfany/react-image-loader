@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom';
 import {ThemeProvider} from "styled-components";
 import theme from "./Theme/Theme";
 import './index.css';
-import App from './App/App';
+import ImagePicker from "./Components/ImagePicker";
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
-    <App />
+    <ImagePicker />
   </ThemeProvider>,
   document.getElementById('root')
 );
