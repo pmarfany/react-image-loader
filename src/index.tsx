@@ -3,11 +3,16 @@ import ReactDOM from 'react-dom';
 import {ThemeProvider} from "styled-components";
 import theme from "./Theme/Theme";
 import './index.css';
+
+import {Provider} from "react-redux";
+import {createStore} from "./Redux/store";
 import ImagePicker from "./Components/ImagePicker";
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
-    <ImagePicker />
+    <Provider store={createStore()}>
+      <ImagePicker />
+    </Provider>
   </ThemeProvider>,
   document.getElementById('root')
 );
