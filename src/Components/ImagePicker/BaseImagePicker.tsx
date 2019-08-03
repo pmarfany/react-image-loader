@@ -1,11 +1,11 @@
 import React, {SyntheticEvent} from "react";
-import GrayButton from "../Button/GrayButton";
-import AccentButton from "../Button/AccentButton";
+import GrayButton from "../RoundButton/GrayButton";
+import AccentButton from "../RoundButton/AccentButton";
 import StyledPicker from "./StyledPicker";
+import isNullOrUndefined from "../../Utils/isNullOrUndefined";
+import {Store} from "../../Redux/types";
 
-export interface IStyledPicker { image?: string; }
-
-interface IImagePicker extends IStyledPicker {
+interface IImagePicker extends Store {
   accept: string;
   onLoadImage: (files: FileList | null) => void;
   removeImage: (e: SyntheticEvent<HTMLSpanElement>) => void;
@@ -36,7 +36,9 @@ const BaseImagePicker: React.FunctionComponent<IImagePicker> = (props) => {
       onDragOver={handleDragStart}
       onDrop={onDrop('dataTransfer')}
     >
-      <GrayButton round onClick={props.removeImage} />
+      { !isNullOrUndefined(props.image) &&
+        <GrayButton round onClick={props.removeImage} />
+      }
       <AccentButton round onClick={openPicker} />
       <input type="file" accept={props.accept} onChange={onDrop('target')} ref={inputRef}/>
     </StyledPicker>

@@ -4,7 +4,7 @@ import reducer from "./reducer";
 import {composeWithDevTools} from "redux-devtools-extension";
 
 // InitialStore
-const initialStore: Store = { isModalOpen: false };
+const initialStore: Store = { image: undefined };
 
 // Create store for app
 const createStore = (): ReduxStore<Store, StoreAction> => (
