@@ -1,23 +1,16 @@
 {
-  "name": "react-image-cropper",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@types/node": "12.0.2",
-    "@types/react": "16.8.17",
-    "@types/react-dom": "16.8.4",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-redux": "^7.0.3",
-    "react-scripts": "3.0.1",
-    "redux": "^4.0.1",
-    "styled-components": "^4.2.0",
-    "typescript": "3.4.5"
-  },
+  "name": "react-image-loader",
+  "version": "1.0.0",
+  "description": "Image loader made with ReactJS",
+  "repository": "https://github.com/pmarfany/react-image-loader",
+  "private": false,
+  "homepage": "http://pmarfany.github.io/react-image-loader/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && npm run publish",
+    "publish": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -34,9 +27,22 @@
       "last 1 safari version"
     ]
   },
+  "dependencies": {
+    "@types/node": "12.0.2",
+    "@types/react": "16.8.17",
+    "@types/react-dom": "16.8.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.0.3",
+    "react-scripts": "3.0.1",
+    "redux": "^4.0.1",
+    "styled-components": "^4.2.0",
+    "typescript": "3.4.5"
+  },
   "devDependencies": {
     "@types/react-redux": "^7.0.9",
     "@types/styled-components": "^4.1.15",
+    "gh-pages": "^2.0.0",
     "redux-devtools-extension": "^2.13.8"
   }
 }
