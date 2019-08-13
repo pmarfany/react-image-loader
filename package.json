@@ -1,6 +1,6 @@
 {
   "name": "react-image-loader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Image loader made with ReactJS",
   "repository": "https://github.com/pmarfany/react-image-loader",
   "private": false,
