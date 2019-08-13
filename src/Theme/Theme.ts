@@ -4,11 +4,12 @@ enum Colors {
   blackAlpha2 = 'rgba(0, 0, 0, 0.2)',
   accent = '#2a5298',
   accentLight = '#5372ab',
+  accentDark = '#282c34',
   gray = '#f9f9f9',
   white = '#ffffff'
 }
 
-interface Theme {
+export interface Theme {
   colors: { [T in keyof typeof Colors]: typeof Colors[T] }
 }
 

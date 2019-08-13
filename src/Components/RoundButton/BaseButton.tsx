@@ -1,6 +1,6 @@
 import * as React from "react";
 import {SyntheticEvent} from "react";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 export interface IButton {
   onClick?: (e: SyntheticEvent<HTMLSpanElement>) => void;
