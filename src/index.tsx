@@ -2,16 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {ThemeProvider} from "styled-components/macro";
 import theme from "./Theme/Theme";
-import GlobalStyle from './style';
 import {Provider} from "react-redux";
 import {createStore} from "./Redux/store";
-import ImagePicker from "./Components/ImagePicker";
+import App from "./Components/App";
+import GlobalStyle from './Components/App/style';
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
     <Provider store={createStore()}>
       <GlobalStyle/>
-      <ImagePicker />
+      <App />
     </Provider>
   </ThemeProvider>,
   document.getElementById('root')
